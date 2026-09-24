@@ -290,6 +290,36 @@ ul
     margin-right: 15px;
 }
 
+.aside .social-links
+{
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.aside .social-links a
+{
+    display: inline-flex;
+    height: 35px;
+    width: 35px;
+    border: 1px solid var(--bg-black-50);
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    margin: 0 4px;
+    color: var(--text-black-900);
+    transition: all 0.3s ease;
+}
+
+.aside .social-links a:hover
+{
+    background: var(--skin-color);
+    color: #fff;
+    border-color: var(--skin-color);
+}
+
 /* Home */
 
 .home
@@ -333,9 +363,15 @@ h3.my-profession
 
 .home-info p
 {
-    margin-bottom: 70px;
+    margin-bottom: 40px;
     font-size: 20px;
     color: var(--text-black-700);
+}
+
+.home .home-info .btn
+{
+    margin-right: 15px;
+    margin-top: 10px;
 }
 
 .home .home-img
@@ -517,6 +553,42 @@ h3.my-profession
     margin-bottom: 30px;
     font-weight: 700;
     color: var(--text-black-900);
+}
+
+.about .about-content .certifications
+{
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-top: 30px;
+}
+
+.about .about-content .certifications .cert-item
+{
+    flex: 0 0 50%;
+    max-width: 50%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.about .about-content .certifications .cert-item .fa
+{
+    font-size: 28px;
+    color: var(--skin-color);
+    margin-right: 15px;
+}
+
+.about .about-content .certifications .cert-item .cert-info h4
+{
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-black-900);
+}
+
+.about .about-content .certifications .cert-item .cert-info p
+{
+    font-size: 14px;
+    color: var(--text-black-700);
 }
 
 .about .about-content .timeline-box
@@ -706,12 +778,87 @@ h3.my-profession
     height: 100%;
     overflow: hidden;
     cursor: pointer;
+    position: relative;
+    display: block;
 }
 
 .portfolio .portfolio-item-inner .portfolio-img img
 {
     width: 100%;
     display: block;
+}
+
+.portfolio .portfolio-item-inner .portfolio-info
+{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px 15px;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0));
+    transform: translateY(100%);
+    transition: all 0.3s ease;
+}
+
+.portfolio .portfolio-item-inner:hover .portfolio-info
+{
+    transform: translateY(0);
+}
+
+.portfolio .portfolio-item-inner .portfolio-info h4
+{
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 8px;
+    text-transform: capitalize;
+}
+
+.portfolio .portfolio-item-inner .portfolio-info p
+{
+    color: #f2f2f2;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.portfolio .portfolio-item-inner .portfolio-info .tech
+{
+    display: block;
+    margin-top: 8px;
+    font-size: 12px;
+    color: var(--skin-color);
+}
+
+.portfolio .portfolio-item-inner.more-projects
+{
+    background: var(--bg-black-100);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    padding: 40px 15px;
+    text-align: center;
+}
+
+.portfolio .portfolio-item-inner.more-projects .fa,
+.portfolio .portfolio-item-inner.more-projects .fab
+{
+    font-size: 40px;
+    color: var(--skin-color);
+    margin-bottom: 15px;
+}
+
+.portfolio .portfolio-item-inner.more-projects h4
+{
+    color: var(--text-black-900);
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.portfolio .portfolio-item-inner.more-projects p
+{
+    color: var(--text-black-700);
+    font-size: 14px;
 }
 
 /* Contact */
@@ -866,7 +1013,8 @@ h3.my-profession
     .about .about-content .skills,
     .about .about-content .education,
     .about .about-content .experience,
-    .about .about-content .personal-info
+    .about .about-content .personal-info,
+    .about .about-content .certifications .cert-item
     {
         flex: 0 0 100%;
         max-width: 100%;
